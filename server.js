@@ -59,7 +59,6 @@ app.post('/api/exercise/new-user', (req, res) => {
     let newUser = new exerciseUserModel({
       username: req.body.username
     })
-    console.log(newUser);
     newUser.save((error, data) => {
       if (error) {
         return console.log('error')
@@ -112,8 +111,6 @@ app.post('/api/exercise/add', async (req, res) => {
     res.send('error');
   }
 })
-
-// real userId with exercises: 5e1c6db4da04c84ec0bbebef
 
 app.get('/api/exercise/log', async (req, res) => {
   try {
